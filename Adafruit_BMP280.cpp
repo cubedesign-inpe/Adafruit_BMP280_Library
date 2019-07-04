@@ -412,3 +412,12 @@ void Adafruit_BMP280::takeForcedMeasurement()
     }
 }
 */
+
+/*!
+ * Gets the register ChipID
+ * @return The chip id
+ */
+uint8_t Adafruit_BMP280::chipID(void)
+{
+    return(read8(BMP280_REGISTER_CHIPID));
+}

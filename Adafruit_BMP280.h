@@ -33,6 +33,8 @@
   (0x76)                     /**< Alternative I2C address for the sensor. */
 #define BMP280_CHIPID (0x58) /**< Default chip ID. */
 
+#define BMP280_REGISTER_CHIPID (0xD0) /**< Customize chipid */
+
 //  Forward declarations of Wire and SPI for board/variant combinations that don't have a default 'Wire' or 'SPI' 
 extern TwoWire Wire;  /**< Forward declaration of Wire object */
 extern SPIClass SPI;  /**< Forward declaration of SPI object */
