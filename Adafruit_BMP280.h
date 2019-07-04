@@ -33,9 +33,7 @@
   (0x76)                     /**< Alternative I2C address for the sensor. */
 #define BMP280_CHIPID (0x58) /**< Default chip ID. */
 
-#define BMP280_REGISTER_CHIPID (0xD0) /**< Customize chipid */
-
-//  Forward declarations of Wire and SPI for board/variant combinations that don't have a default 'Wire' or 'SPI' 
+//  Forward declarations of Wire and SPI for board/variant combinations that don't have a default 'Wire' or 'SPI'
 extern TwoWire Wire;  /**< Forward declaration of Wire object */
 extern SPIClass SPI;  /**< Forward declaration of SPI object */
 
@@ -173,6 +171,8 @@ public:
   float readAltitude(float seaLevelhPa = 1013.25);
 
   // void takeForcedMeasurement();
+
+  uint8_t chipID(void);
 
   void setSampling(sensor_mode mode = MODE_NORMAL,
                    sensor_sampling tempSampling = SAMPLING_X16,
